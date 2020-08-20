@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 
 import { useCalculator } from '../../hooks/calculator';
 
@@ -56,28 +56,35 @@ const ResultCalculator: React.FC = () => {
 
   return (
     <S.Container>
-      <header>
-        <h3>{ category }</h3>
-      </header>
-      <div className="container-illustration">
-        <img src={illustration} alt="image" />
-      </div>
-      <S.ResultContainer>
-        <div>
-          <p>Teu índice de massa corporal é de:</p>
-          <span>
-            {totalImc}
-            {' '}
-            kg/m²
-          </span>
-        </div>
-        <div>
-          <p>Peso ideal é entre:</p>
-          <span>
-            {idealWeight}
-          </span>
-        </div>
-      </S.ResultContainer>
+      {
+        data.gender && (
+          <>
+            <header>
+              <h3>{ category }</h3>
+            </header>
+            <div className="container-illustration">
+              <img src={illustration} alt="image" />
+            </div>
+            <S.ResultContainer>
+              <div>
+                <p>Teu índice de massa corporal é de:</p>
+                <span>
+                  {totalImc}
+                  {' '}
+                  kg/m²
+                </span>
+              </div>
+              <div>
+                <p>Peso ideal é entre:</p>
+                <span>
+                  {idealWeight}
+                </span>
+              </div>
+            </S.ResultContainer>
+          </>
+        )
+      }
+
     </S.Container>
   );
 };

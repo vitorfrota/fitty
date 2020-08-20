@@ -19,6 +19,6 @@ export default createGlobalStyle`
     margin: 0 auto;
     width: 100vw;
     height: 100vh;
-    background: #333;
+    background: #2B2D42;
   }
 `;

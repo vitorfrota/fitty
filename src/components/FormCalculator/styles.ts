@@ -6,7 +6,12 @@ export const Container = styled.div`
   justify-content: center;
   padding: 30px;
   height: 100%;
-  background: #fff;
+  background: #f5f5f5;
+  border-radius: 0 8px 8px 0;
+
+  @media(max-width: 540px){
+    border-radius: 0;
+  }
 `;
 
 export const Form = styled.form`
@@ -19,8 +24,10 @@ export const Form = styled.form`
     width: 100%;
     border: none;
     border-radius: 8px;
-    background: blue;
+    background: #00CC69;
     color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 `;
 
@@ -48,7 +55,7 @@ export const Gender = styled.ul`
     }
 
     .active{
-      border-color: blue;
+      border-color: #00CC69;
     }
 `;
 
@@ -64,7 +71,7 @@ export const Range = styled.div`
     span{
       font-size: 26px;
       font-weight: bold;
-      color: blue;
+      color: #00CC69;
     }
   }
 

@@ -20,6 +20,14 @@ const FormCalculator: React.FC = () => {
     setFormData({ weight, height, gender });
   }, [gender, height, weight]);
 
+  const handleSetHeight = useCallback((e) => {
+    setHeight(e.target.value);
+  }, []);
+
+  const handleSetWeight = useCallback((e) => {
+    setWeight(e.target.value);
+  }, []);
+
   return (
     <S.Container>
       <S.Form onSubmit={handleSubmit}>
@@ -51,7 +59,7 @@ const FormCalculator: React.FC = () => {
           <input
             type="range"
             name="weight"
-            onInput={(e) => setWeight(e.target.value)}
+            onChange={(e) => handleSetWeight(e)}
             min="20"
             max="200"
             value={weight}
@@ -68,7 +76,7 @@ const FormCalculator: React.FC = () => {
           <input
             type="range"
             name="height"
-            onInput={(e) => setHeight(e.target.value)}
+            onChange={(e) => handleSetHeight(e)}
             min="100"
             max="230"
             value={height}

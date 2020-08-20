@@ -3,13 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: #fff;
   height: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
+  border-radius: 8px 0 0 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   header{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -17,7 +18,7 @@ export const Container = styled.div`
 
     h3{
       text-transform: uppercase;
-      color: blue;
+      color: #00CC69;
     }
   }
 
@@ -30,6 +31,10 @@ export const Container = styled.div`
       width: 100%;
       height: 100%;
     }
+  }
+
+  @media(max-width: 540px){
+    border-radius: 0;
   }
 `;
 
@@ -55,6 +60,6 @@ export const ResultContainer = styled.div`
   span{
       font-size: 26px;
       font-weight: bold;
-      color: blue;
+      color: #00CC69;
     }
 `;
