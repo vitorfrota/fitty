@@ -8,7 +8,7 @@ import * as S from './styles';
 
 const FormCalculator: React.FC = () => {
   const { setFormData } = useCalculator();
-  const [weight, setWeight] = useState(50); // peso em kg
+  const [weight, setWeight] = useState(20); // peso em kg
   const [height, setHeight] = useState(100); // altura em cm
   const [gender, setGender] = useState<'m'|'f'>('m'); // genero m ou f
 
@@ -32,7 +32,10 @@ const FormCalculator: React.FC = () => {
     <S.Container>
       <S.Form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="gender">Selecione seu sexo</label>
+          <label htmlFor="gender">
+            Selecione seu sexo
+            <strong>*</strong>
+          </label>
           <S.Gender>
             <li
               onClick={() => setGender('m')}
@@ -50,7 +53,11 @@ const FormCalculator: React.FC = () => {
         </div>
         <S.Range>
           <label htmlFor="weight">
-            Qual seu peso?
+            <p>
+              Qual seu peso?
+              <strong>*</strong>
+            </p>
+
             <span>
               {weight}
               kg
@@ -67,7 +74,10 @@ const FormCalculator: React.FC = () => {
         </S.Range>
         <S.Range>
           <label htmlFor="height">
-            Qual sua altura?
+            <p>
+              Qual sua altura?
+              <strong>*</strong>
+            </p>
             <span>
               {heightToMeters}
               m

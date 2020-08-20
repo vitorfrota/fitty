@@ -4,8 +4,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
+  grid-template-columns: 1fr;
   @media(max-width: 540px){
     display: flex;
     flex-direction: column;

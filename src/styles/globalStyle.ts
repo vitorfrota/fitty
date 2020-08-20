@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
   body{
     -webkit-font-smoothing: antialiased;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   button {
     cursor: pointer;

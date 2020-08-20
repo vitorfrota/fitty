@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: #fff;
   height: 100%;
-  border: 1px solid #eee;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,6 +32,18 @@ export const Container = styled.div`
     }
   }
 
+  button {
+    margin: 30px;
+    margin-top: 0;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #00CC69;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
   @media(max-width: 540px){
     border-radius: 0;
   }
@@ -55,11 +66,13 @@ export const ResultContainer = styled.div`
 
   p{
     font-size: 16px;
+    color: #333;
   }
 
   span{
+      margin-top: 10px;
       font-size: 26px;
-      font-weight: bold;
+      font-weight: 500;
       color: #00CC69;
     }
 `;

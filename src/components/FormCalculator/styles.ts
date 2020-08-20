@@ -6,8 +6,8 @@ export const Container = styled.div`
   justify-content: center;
   padding: 30px;
   height: 100%;
-  background: #f5f5f5;
-  border-radius: 0 8px 8px 0;
+  background: #fff;
+  border-radius: 8px;
 
   @media(max-width: 540px){
     border-radius: 0;
@@ -17,6 +17,14 @@ export const Container = styled.div`
 export const Form = styled.form`
     div + div {
       margin: 30px 0;
+    }
+
+    label{
+      color: #333;
+
+      strong {
+        color: #00CC69;
+      }
     }
 
   button{
@@ -40,10 +48,11 @@ export const Gender = styled.ul`
     margin-top: 15px;
 
     li{
-      height: 90px;
-      width: 90px;
+      background: #f5f5f5;
+      border: 2px solid #f5f5f5;
+      height: 120px;
+      width: 120px;
       border-radius: 8px;
-      border: 2px solid #ccc;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -69,8 +78,8 @@ export const Range = styled.div`
     justify-content: space-between;
 
     span{
-      font-size: 26px;
-      font-weight: bold;
+      font-size: 28px;
+      font-weight: 500;
       color: #00CC69;
     }
   }
