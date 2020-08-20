@@ -4,6 +4,12 @@ import { useCalculator } from '../../hooks/calculator';
 
 import * as S from './styles';
 
+interface FormData {
+  weight: number;
+  height: number;
+  gender: 'm' | 'f';
+}
+
 const ResultCalculator: React.FC = () => {
   const { data, setFormData } = useCalculator();
 
@@ -55,7 +61,7 @@ const ResultCalculator: React.FC = () => {
   }, [data]);
 
   const resetForm = useCallback(() => {
-    setFormData({});
+    setFormData({} as FormData);
   },
   []);
 
