@@ -25,7 +25,7 @@ const FormCalculator: React.FC = () => {
       <S.Form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="gender">Selecione seu sexo</label>
-          <S.Gender name="gender">
+          <S.Gender>
             <li
               onClick={() => setGender('m')}
               className={gender === 'm' ? 'active' : ''}
@@ -45,7 +45,6 @@ const FormCalculator: React.FC = () => {
             Qual seu peso?
             <span>
               {weight}
-              {' '}
               kg
             </span>
           </label>

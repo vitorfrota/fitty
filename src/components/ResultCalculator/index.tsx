@@ -34,6 +34,17 @@ const ResultCalculator: React.FC = () => {
     return '';
   }, [totalImc]);
 
+  const idealWeight = useMemo(() => {
+    const { height } = data;
+
+    const heightToMeters = height / 100;
+
+    const min = ((heightToMeters * heightToMeters) * 18.5).toFixed(1);
+    const max = ((heightToMeters * heightToMeters) * 24.9).toFixed(2);
+
+    return `${min}kg - ${max}kg`;
+  }, [data]);
+
   const illustration = useMemo(() => {
     const { gender } = data;
 
@@ -61,8 +72,10 @@ const ResultCalculator: React.FC = () => {
           </span>
         </div>
         <div>
-          <p>Peso ideal é de:</p>
-          <span>80kg</span>
+          <p>Peso ideal é entre:</p>
+          <span>
+            {idealWeight}
+          </span>
         </div>
       </S.ResultContainer>
     </S.Container>
