@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  justify-content: center;
+  padding: 30px;
+  height: 100%;
   background: #fff;
 `;
 

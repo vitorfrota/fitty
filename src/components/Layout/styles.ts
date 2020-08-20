@@ -6,9 +6,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  border:1px solid red;
   width: 100%;
   display: grid;
   place-items: center;
   margin-top: 100px;
+
+  @media (max-width: 540px){
+    margin-top: 10px;
+  }
 `;

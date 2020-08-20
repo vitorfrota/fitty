@@ -1,11 +1,13 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 
 import * as S from './styles';
 
 const FormCalculator: React.FC = () => {
-  const [weight, setWeight] = useState(50);
-  const [height, setHeight] = useState(100);
-  const [gender, setGender] = useState('');
+  const [weight, setWeight] = useState(50); // peso em kg
+  const [height, setHeight] = useState(100); // altura em cm
+  const [gender, setGender] = useState(''); // genero m ou f
+
+  const heightToMeters = useMemo(() => height / 100, [height]);
 
   const handleSubmit = useCallback((e) => {
     e.preventDefault();
@@ -60,7 +62,7 @@ const FormCalculator: React.FC = () => {
           <label htmlFor="height">
             Qual sua altura?
             <span>
-              {height / 100}
+              {heightToMeters}
               m
             </span>
           </label>
