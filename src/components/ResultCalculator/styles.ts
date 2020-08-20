@@ -17,6 +17,7 @@ export const Container = styled.div`
 
     h3{
       text-transform: uppercase;
+      color: blue;
     }
   }
 
