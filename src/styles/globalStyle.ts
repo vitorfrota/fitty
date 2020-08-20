@@ -8,14 +8,17 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-    background: #FFF;
-    color: #000;
     -webkit-font-smoothing: antialiased;
+    font-family: sans-serif;
   }
   button {
     cursor: pointer;
   }
+
   #root{
     margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
   }
 `;
