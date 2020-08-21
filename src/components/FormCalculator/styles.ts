@@ -16,7 +16,12 @@ export const Container = styled.div`
 
 export const Form = styled.form`
     div + div {
-      margin: 30px 0;
+      margin: 50px 0;
+    }
+
+    h2{
+      color: #333;
+      margin-bottom: 25px;
     }
 
     label{
@@ -49,7 +54,7 @@ export const Gender = styled.ul`
 
     li{
       background: #f5f5f5;
-      border: 2px solid #f5f5f5;
+      border: 3px solid #f5f5f5;
       height: 120px;
       width: 120px;
       border-radius: 8px;
@@ -81,10 +86,37 @@ export const Range = styled.div`
       font-size: 28px;
       font-weight: 500;
       color: #00CC69;
+
+      strong{
+        font-size: 24px;
+      }
     }
   }
 
   input[type="range"]{
     margin-top: 20px;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      background-color: #f5f5f5;
+  }
+
+  &::-webkit-slider-thumb {
+      margin-top: -8px;
+      width: 24px;
+      -webkit-appearance: none;
+      height: 24px;
+      border-radius: 50%;
+      background: #00CC69;
+      transition: all 100ms;
+
+      &:active{
+       width: 20px;
+       height: 20px;
+       margin-top: -5px;
+      }
+    }
   }
 `;

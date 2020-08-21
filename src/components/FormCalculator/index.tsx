@@ -31,6 +31,7 @@ const FormCalculator: React.FC = () => {
   return (
     <S.Container>
       <S.Form onSubmit={handleSubmit}>
+        <h2>Calcule seu imc</h2>
         <div>
           <label htmlFor="gender">
             Selecione seu sexo
@@ -60,7 +61,7 @@ const FormCalculator: React.FC = () => {
 
             <span>
               {weight}
-              kg
+              <strong> kg</strong>
             </span>
           </label>
           <input
@@ -68,7 +69,7 @@ const FormCalculator: React.FC = () => {
             name="weight"
             onChange={(e) => handleSetWeight(e)}
             min="20"
-            max="200"
+            max="180"
             value={weight}
           />
         </S.Range>
@@ -80,7 +81,7 @@ const FormCalculator: React.FC = () => {
             </p>
             <span>
               {heightToMeters}
-              m
+              <strong> m</strong>
             </span>
           </label>
           <input

@@ -57,7 +57,7 @@ export const ResultContainer = styled.div`
   padding-bottom: 20px;
 
   div{
-    margin-top: 15px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +71,7 @@ export const ResultContainer = styled.div`
 
   span{
       margin-top: 10px;
-      font-size: 26px;
+      font-size: 32px;
       font-weight: 500;
       color: #00CC69;
     }

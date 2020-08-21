@@ -48,7 +48,7 @@ const ResultCalculator: React.FC = () => {
     const min = ((heightToMeters * heightToMeters) * 18.5).toFixed(1);
     const max = ((heightToMeters * heightToMeters) * 24.9).toFixed(2);
 
-    return `${min}kg - ${max}kg`;
+    return `${min}kg ~ ${max}kg`;
   }, [data]);
 
   const illustration = useMemo(() => {
@@ -81,7 +81,6 @@ const ResultCalculator: React.FC = () => {
                 <p>Teu índice de massa corporal é de:</p>
                 <span>
                   {totalImc}
-                  {' '}
                   kg/m²
                 </span>
               </div>
@@ -92,7 +91,7 @@ const ResultCalculator: React.FC = () => {
                 </span>
               </div>
             </S.ResultContainer>
-            <button onClick={resetForm}>Calcular novamente</button>
+            <button type="button" onClick={resetForm}>Calcular novamente</button>
           </>
         )
       }
