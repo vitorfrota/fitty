@@ -18,7 +18,7 @@ export default createGlobalStyle`
   #root{
     margin: 0 auto;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: #2B2D42;
   }
 `;

@@ -3,11 +3,14 @@ import React, {
 } from 'react';
 
 import { useCalculator } from '../../hooks/calculator';
+import { useRoute } from '../../hooks/route';
 
 import * as S from './styles';
 
 const FormCalculator: React.FC = () => {
   const { setFormData } = useCalculator();
+  const { navigateTo } = useRoute();
+
   const [weight, setWeight] = useState(100); // peso em kg
   const [height, setHeight] = useState(165); // altura em cm
   const [gender, setGender] = useState<'m'|'f'>('m'); // genero m ou f
@@ -18,7 +21,8 @@ const FormCalculator: React.FC = () => {
     e.preventDefault();
 
     setFormData({ weight, height, gender });
-  }, [gender, height, weight, setFormData]);
+    navigateTo('result');
+  }, [gender, height, weight, setFormData, navigateTo]);
 
   const handleSetHeight = useCallback((e) => {
     setHeight(e.target.value);
@@ -31,7 +35,7 @@ const FormCalculator: React.FC = () => {
   return (
     <S.Container>
       <S.Form onSubmit={handleSubmit}>
-        <h2>Calcule seu imc</h2>
+        <h2>Registre seu peso</h2>
         <div>
           <label htmlFor="gender">
             Selecione seu sexo
