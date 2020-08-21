@@ -8,8 +8,8 @@ import * as S from './styles';
 
 const FormCalculator: React.FC = () => {
   const { setFormData } = useCalculator();
-  const [weight, setWeight] = useState(20); // peso em kg
-  const [height, setHeight] = useState(100); // altura em cm
+  const [weight, setWeight] = useState(100); // peso em kg
+  const [height, setHeight] = useState(165); // altura em cm
   const [gender, setGender] = useState<'m'|'f'>('m'); // genero m ou f
 
   const heightToMeters = useMemo(() => height / 100, [height]);
@@ -18,7 +18,7 @@ const FormCalculator: React.FC = () => {
     e.preventDefault();
 
     setFormData({ weight, height, gender });
-  }, [gender, height, weight]);
+  }, [gender, height, weight, setFormData]);
 
   const handleSetHeight = useCallback((e) => {
     setHeight(e.target.value);

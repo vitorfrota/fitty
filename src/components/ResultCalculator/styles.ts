@@ -22,14 +22,9 @@ export const Container = styled.div`
   }
 
   .container-illustration {
-    height: 200px;
-    width: 200px;
-    margin: 20px auto;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    height: 250px;
+    width: 250px;
+    margin: 10px auto;
   }
 
   button {

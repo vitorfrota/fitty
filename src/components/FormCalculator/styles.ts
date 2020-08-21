@@ -85,10 +85,11 @@ export const Range = styled.div`
     span{
       font-size: 28px;
       font-weight: 500;
-      color: #00CC69;
+      color: #5A5A5A;
 
       strong{
         font-size: 24px;
+        color: #5A5A5A;
       }
     }
   }
