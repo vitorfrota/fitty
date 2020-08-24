@@ -21,7 +21,10 @@
 
 Fitty is a project can monitor your weight and get a nice graphical analysis. So you can increase your motivation and reach your target weight faster.
 
-![](example.gif)
+
+<h1 align="center">
+  <img src="example.gif" alt="animation" />
+</h1>
 
 ## Technologies
 
